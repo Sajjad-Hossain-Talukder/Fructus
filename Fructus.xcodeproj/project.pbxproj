@@ -16,6 +16,7 @@
 		B6996C6A2B414680004B13CE /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6996C692B414680004B13CE /* OnBoardingView.swift */; };
 		B6996C6D2B414A07004B13CE /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6996C6C2B414A07004B13CE /* FruitModel.swift */; };
 		B6996C6F2B414B7B004B13CE /* FruitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6996C6E2B414B7B004B13CE /* FruitData.swift */; };
+		B6996C722B416700004B13CE /* FruitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6996C712B416700004B13CE /* FruitRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B6996C692B414680004B13CE /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		B6996C6C2B414A07004B13CE /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
 		B6996C6E2B414B7B004B13CE /* FruitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitData.swift; sourceTree = "<group>"; };
+		B6996C712B416700004B13CE /* FruitRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				B6626EBF2B412A5C00F02148 /* FruitCardView.swift */,
 				B6626EC12B4137DC00F02148 /* StartButtonView.swift */,
+				B6996C712B416700004B13CE /* FruitRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				B6996C6F2B414B7B004B13CE /* FruitData.swift in Sources */,
 				B6626EC02B412A5C00F02148 /* FruitCardView.swift in Sources */,
+				B6996C722B416700004B13CE /* FruitRowView.swift in Sources */,
 				B6626EC22B4137DC00F02148 /* StartButtonView.swift in Sources */,
 				B6626EB22B41235C00F02148 /* ContentView.swift in Sources */,
 				B6996C6A2B414680004B13CE /* OnBoardingView.swift in Sources */,
