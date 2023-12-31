@@ -20,6 +20,7 @@
 		B6996C742B417592004B13CE /* FruitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6996C732B417592004B13CE /* FruitDetailView.swift */; };
 		B6996C762B4187FE004B13CE /* FruitHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6996C752B4187FE004B13CE /* FruitHeaderView.swift */; };
 		B6996C782B41963E004B13CE /* SourceLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6996C772B41963D004B13CE /* SourceLinkView.swift */; };
+		B6996C7A2B419D9C004B13CE /* FruitNutrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6996C792B419D9C004B13CE /* FruitNutrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		B6996C732B417592004B13CE /* FruitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailView.swift; sourceTree = "<group>"; };
 		B6996C752B4187FE004B13CE /* FruitHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitHeaderView.swift; sourceTree = "<group>"; };
 		B6996C772B41963D004B13CE /* SourceLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLinkView.swift; sourceTree = "<group>"; };
+		B6996C792B419D9C004B13CE /* FruitNutrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitNutrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				B6996C712B416700004B13CE /* FruitRowView.swift */,
 				B6996C752B4187FE004B13CE /* FruitHeaderView.swift */,
 				B6996C772B41963D004B13CE /* SourceLinkView.swift */,
+				B6996C792B419D9C004B13CE /* FruitNutrationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				B6996C742B417592004B13CE /* FruitDetailView.swift in Sources */,
 				B6626EB22B41235C00F02148 /* ContentView.swift in Sources */,
 				B6996C762B4187FE004B13CE /* FruitHeaderView.swift in Sources */,
+				B6996C7A2B419D9C004B13CE /* FruitNutrationView.swift in Sources */,
 				B6996C6A2B414680004B13CE /* OnBoardingView.swift in Sources */,
 				B6996C6D2B414A07004B13CE /* FruitModel.swift in Sources */,
 				B6626EB02B41235C00F02148 /* FructusApp.swift in Sources */,
