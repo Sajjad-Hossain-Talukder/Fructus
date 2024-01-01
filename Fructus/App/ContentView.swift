@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
     //MARK: - PROPERTIES
+    @State private var isSheetPresenting : Bool = false
+    
     
      //MARK: - BODY
     var body: some View {
@@ -28,6 +32,17 @@ struct ContentView: View {
     
           
             .navigationTitle("Fruits")
+            .toolbar{
+                Button(action: {
+                    isSheetPresenting = true
+                }, label: {
+                    Image(systemName: "slider.horizontal.3")
+                }) //: Button
+                .sheet(isPresented: $isSheetPresenting , content: {
+                    SettingsView()
+        
+                })
+            }//: toolbar
             
         }//: NavView
      
