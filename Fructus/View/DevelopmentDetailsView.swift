@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct DevelopmentDetailsView: View {
+    //MARK: - PROPERTIES
+    
+    //MARK: - BODY
     var body: some View {
         VStack{
             
@@ -25,10 +28,6 @@ struct DevelopmentDetailsView: View {
             
         }//: Vstack
     }
-}
-
-#Preview {
-    DevelopmentDetailsView()
 }
 
 
@@ -56,6 +55,7 @@ struct ExtractedView: View {
                         Text(handle)
                             //.fontWeight(.semibold)
                         Image(systemName: icon! )
+                            .foregroundColor(.pink)
                     } //: HStack
                     
                 }) //: Link
@@ -67,3 +67,13 @@ struct ExtractedView: View {
         } //: HStack
     }
 }
+
+
+//MARK: - PREVIEW
+
+#Preview {
+    DevelopmentDetailsView()
+    
+   // DevelopmentDetailsView()
+}
+

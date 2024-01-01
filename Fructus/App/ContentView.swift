@@ -16,7 +16,7 @@ struct ContentView: View {
     
      //MARK: - BODY
     var body: some View {
-        NavigationView {
+        NavigationStack {
             //}
         
             List{
@@ -45,6 +45,7 @@ struct ContentView: View {
             }//: toolbar
             
         }//: NavView
+        
      
         
         

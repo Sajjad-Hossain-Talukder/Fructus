@@ -10,6 +10,8 @@ import SwiftUI
 struct SettingsView: View {
     //MARK: - PROPERTIES
     @Environment(\.dismiss) private var dismiss
+    @AppStorage("isOnBoarding") var isOnBoarding : Bool = false
+    
     //MARK: - BODY
     
     var body: some View {
@@ -25,7 +27,7 @@ struct SettingsView: View {
                         label: SettingLabelView(labelText: "Fructus", labelImage: "info.square"),
                         content: {
                             Divider().padding(.vertical,4)
-                            HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/ ){
+                            HStack(alignment: .center ){
                                 Image("logo")
                                     .resizable()
                                     .scaledToFit()
@@ -40,11 +42,33 @@ struct SettingsView: View {
                     
                     //MARK: - SECTION 2
                     
+                    GroupBox(
+                        label: SettingLabelView(labelText: "Customization", labelImage: "paintbrush"),
+                        content: {
+                        Text("If you wish, you can restart the application by toggle the switch in this box. That way it starts the onboarding process and you will the welcome screen again.")
+                                .font(.footnote)
+                                .padding(.vertical,8)
+                                .frame(minHeight: 60)
+                                .layoutPriority(1)
+                                .multilineTextAlignment(.leading)
+                        
+                            Toggle(isOn: $isOnBoarding, label: {
+                                Text("Restart".uppercased())
+                            })
+                            .padding()
+                            .background(
+                                Color(UIColor.tertiarySystemBackground)
+                                    .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                            )
+                            
+                            
+                    })
+                    
                     
                     //MARK: - SECTION 3
                     
                     GroupBox(
-                        label: SettingLabelView(labelText: "Application", labelImage: "text.append"),
+                        label: SettingLabelView(labelText: "Application", labelImage: "apps.iphone"),
                         content: {
                             DevelopmentDetailsView()
                     })
