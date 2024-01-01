@@ -38,9 +38,9 @@ struct ExtractedView: View {
     let handle : String
     let link : String?
     let icon : String?
+    
+    
     //MARK: - BODY
-    
-    
     var body: some View {
         Divider().padding(.vertical,4)
         

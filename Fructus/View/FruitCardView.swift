@@ -19,11 +19,13 @@ struct FruitCardView: View {
 
     
     var body: some View {
+        
+        
         ZStack {
             
             VStack(spacing: 20){
-                // Fruit Image
                 
+                // Fruit Image
                 Image(fruit.image)
                     .resizable()
                     .scaledToFit()
@@ -43,7 +45,6 @@ struct FruitCardView: View {
                     .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 2, x: 2, y: 2)
                 
                 // Fruit headline
-                
                 Text(fruit.headline)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
@@ -60,7 +61,7 @@ struct FruitCardView: View {
             withAnimation(.easeOut(duration: 0.5)) {
                 isAnimating = true
             }
-        }
+        } //: onAppear
         .frame(minWidth: 0,maxWidth: .infinity , minHeight: 0 , maxHeight: .infinity , alignment: .center)
         .background(LinearGradient(
             gradient: Gradient(
