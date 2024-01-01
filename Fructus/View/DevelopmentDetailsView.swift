@@ -11,17 +11,17 @@ struct DevelopmentDetailsView: View {
     var body: some View {
         VStack{
             
-            ExtractedView(titlePortion: "Developer", description: "Sajjad Hossain Talukder")
-            ExtractedView(titlePortion: "Designer", description: "Robert Bruce")
-            ExtractedView(titlePortion: "Compatibility", description: "iOS 17")
+            ExtractedView(titlePortion: "Developer", handle: "Sajjad Hossain Talukder", link: nil , icon: nil)
+            ExtractedView(titlePortion: "Designer", handle: "Robert Bruce", link: nil , icon: nil)
+            ExtractedView(titlePortion: "Compatibility", handle: "iOS 17", link: nil , icon: nil)
            
             
-            ExtractedLinkView(titlePortion: "Website", link: "https://sajjad-hossain-talukder.github.io/resume/", handle: "PortFolio", icon: "arrow.up.right.square")
-            ExtractedLinkView(titlePortion: "Twitter", link: "https://twitter.com", handle: "@sajjadhuseyn", icon: "arrow.up.right.square")
+            ExtractedView(titlePortion: "Website", handle: "PortFolio", link: "https://sajjad-hossain-talukder.github.io/resume/", icon: "arrow.up.right.square")
+            ExtractedView(titlePortion: "Twitter", handle: "@sajjadhuseyn", link: "https://twitter.com", icon: "arrow.up.right.square")
             
-            ExtractedView(titlePortion: "SwiftUI", description: "5.0")
+            ExtractedView(titlePortion: "SwiftUI", handle: "5.0", link: nil , icon: nil)
             
-            ExtractedView(titlePortion: "Version", description: "1.1.0")
+            ExtractedView(titlePortion: "Version", handle: "1.1.0", link: nil , icon: nil)
             
         }//: Vstack
     }
@@ -31,33 +31,14 @@ struct DevelopmentDetailsView: View {
     DevelopmentDetailsView()
 }
 
+
 struct ExtractedView: View {
-    //MARK: - PROPERTIES
-    let titlePortion : String
-    let description : String
-    
-    //MARK: - BODY
-    var body: some View {
-        Divider().padding(.vertical,4)
-        HStack{
-            Text(titlePortion)
-                .fontWeight(.semibold)
-                .foregroundColor(.gray)
-            Spacer()
-            Text(description)
-                .fontWeight(.semibold)
-        }
-    }
-}
-
-
-struct ExtractedLinkView: View {
     
     //MARK: - PROPERTIES
     let titlePortion : String
-    let link : String
     let handle : String
-    let icon : String
+    let link : String?
+    let icon : String?
     //MARK: - BODY
     
     
@@ -69,14 +50,20 @@ struct ExtractedLinkView: View {
                 .fontWeight(.semibold)
                 .foregroundColor(.gray)
             Spacer()
-            Link(destination: URL(string: link )!, label: {
-                HStack (spacing:10){
-                    Text(handle)
-                        .fontWeight(.semibold)
-                    Image(systemName: icon )
-                } //: HStack
-                
-            }) //: Link
+            if let safeLink = link {
+                Link(destination: URL(string: safeLink )!, label: {
+                    HStack (spacing:5){
+                        Text(handle)
+                            //.fontWeight(.semibold)
+                        Image(systemName: icon! )
+                    } //: HStack
+                    
+                }) //: Link
+            } else {
+                Text(handle)
+                    //.fontWeight(.semibold)
+            }
+            
         } //: HStack
     }
 }
