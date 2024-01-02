@@ -76,9 +76,7 @@ struct FruitDetailView: View {
             .edgesIgnoringSafeArea(.top)
            
         }//: Nav View
-    
-       
-      
+
         
     }
 }
